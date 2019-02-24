@@ -1,7 +1,7 @@
 /**
  * @author Kekang Shu 
  * ClassID: 548
- * Assignment Number: 1
+ * Assignment Number: 2
  * Description: This is the second assignment for CSE360 class.
  */
 package cse360assign2;
