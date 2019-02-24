@@ -10,6 +10,8 @@ public class Calculator {
 
 	private int total;
 	
+	private String history = "0"; // History string that record all action.
+	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
 	}
@@ -28,6 +30,7 @@ public class Calculator {
 	 * 
 	 */
 	public void add (int value) {
+		history = history + " + " + value;
 		total = total + value;
 		
 	}
@@ -37,6 +40,7 @@ public class Calculator {
 	 * This method will subtract the parameter from the total variable.
 	 */
 	public void subtract (int value) {
+		history = history + " - " + value;
 		total = total - value;
 	}
 	/**
@@ -45,6 +49,7 @@ public class Calculator {
 	 * This method will multiply the total by the parameter.
 	 */
 	public void multiply (int value) {
+		history = history + " * " + value;
 		total = total * value;
 	}
 	/**
@@ -53,6 +58,7 @@ public class Calculator {
 	 * This method will divide the total by the parameter.
 	 */
 	public void divide (int value) {
+		history = history + " / " + value;
 		if(value == 0)
 		{
 			total = 0;
@@ -64,10 +70,10 @@ public class Calculator {
 	}
 	/**
 	 * 
-	 * This method will return history.
+	 * This method will return a history string that include all action history.
 	 * 
 	 */
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }
